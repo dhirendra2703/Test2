@@ -59,7 +59,7 @@ else:
     print("Else")
 
 #
-# driver.quit()
+driver.quit()
 
 # if a.first_selected_option.get_attribute("BOTH") == "BOTH":
 #     print("Both is selected")
