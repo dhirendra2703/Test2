@@ -41,14 +41,14 @@ value = a.first_selected_option.text
 print(value)
 wait_obj = WebDriverWait(driver, 10)
 try:
-    wait_obj.until(expected_conditions.text_to_be_present_in_element(a, "Select from list"))
+    wait_obj.until(expected_conditions.text_to_be_present_in_element(value, "Select from list"))
     # if value == "Select from list":
     print("No Value is selected")
 
 except:
     if value == "Both":
         print("Both condition")
-    elif value == "IPD":
+    if value == "IPD":
         print("IPD condition")
     else:
         print("OPD condition")
@@ -58,9 +58,8 @@ except:
 else:
     print("Else")
 
-
-
-driver.quit()
+#
+# driver.quit()
 
 # if a.first_selected_option.get_attribute("BOTH") == "BOTH":
 #     print("Both is selected")
